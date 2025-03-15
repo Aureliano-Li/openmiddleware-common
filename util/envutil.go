@@ -5,6 +5,7 @@ import (
 	"os"
 )
 
+// 获取环境变量
 func GetParamFromEnv(envName string) string {
 	// 获取名为 "envName" 的环境变量的值
 	envValue := os.Getenv(envName)
