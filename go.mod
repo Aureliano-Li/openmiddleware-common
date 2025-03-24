@@ -1,6 +1,6 @@
 module github.com/Aureliano-Li/openmiddleware-common
 
-go 1.19
+go 1.21
 
 require (
 	github.com/sirupsen/logrus v1.9.3
