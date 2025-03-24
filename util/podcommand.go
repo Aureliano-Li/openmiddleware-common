@@ -1,10 +1,9 @@
-package k8s
+package util
 
 import (
 	"bytes"
 	"context"
 	"fmt"
-	"github.com/Aureliano-Li/openmiddleware-common/util"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/scheme"
@@ -14,12 +13,12 @@ import (
 )
 
 var (
-	olog = util.GetLogger()
+	olog = GetLogger()
 )
 
 func ExecCommandInPod(podName, namespace, containerName, command string) (string, string, error) {
 	// 获取 Kubernetes 配置
-	kubeConfigPath := util.GetParamFromEnv("KUBE_CONFIG_PATH")
+	kubeConfigPath := GetParamFromEnv("KUBE_CONFIG_PATH")
 	// /Users/li/env/88.conf
 	config := ctrl.GetConfigOrDie()
 	if kubeConfigPath != "" {
