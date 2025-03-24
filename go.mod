@@ -1,4 +1,4 @@
-module github.com/openmiddleware/zookeeper-operator
+module github.com/openmiddleware/openmiddleware-common
 
 go 1.19
 
