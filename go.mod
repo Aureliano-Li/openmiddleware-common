@@ -1,4 +1,4 @@
-module github.com/openmiddleware/openmiddleware-common
+module github.com/Aureliano-Li/openmiddleware-common
 
 go 1.19
 
