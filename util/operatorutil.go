@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func getNamespaceFilter() predicate.Funcs {
+func GetNamespaceFilter() predicate.Funcs {
 	// 定义 Predicate，过滤命名空间
 	watchNamespace := GetParamFromEnv("WATCH_NAMESPACE")
 	nsMap := StringToMap(watchNamespace)
