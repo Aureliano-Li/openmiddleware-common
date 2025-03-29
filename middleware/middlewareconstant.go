@@ -1,4 +1,4 @@
-package util
+package middleware
 
 const (
 	KeyLabelOpenMiddlewareType = "open_middleware_type"

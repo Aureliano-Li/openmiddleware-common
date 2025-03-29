@@ -1,4 +1,4 @@
-package util
+package middleware
 
 const (
 	MiddlewareTypeZookeeper = "zookeeper"
