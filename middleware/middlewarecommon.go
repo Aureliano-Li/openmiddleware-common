@@ -5,6 +5,11 @@ import (
 	"strconv"
 )
 
+// GetHeadlessServiceName 获取中间件headless svc name
+func GetHeadlessServiceName(middlewareName string) string {
+	return middlewareName + "-headless"
+}
+
 // GetMiddlewareLabels 获取中间件label
 func GetMiddlewareLabels(middlewareName, middlewareType string) map[string]string {
 	return map[string]string{
