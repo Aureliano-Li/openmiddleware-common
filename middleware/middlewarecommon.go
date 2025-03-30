@@ -16,6 +16,10 @@ var (
 	mlog = util.GetLogger()
 )
 
+func GetInitConfigMapName(middlewareName string) string {
+	return fmt.Sprintf("%s-init-shell", middlewareName)
+}
+
 // GetHeadlessServiceName 获取中间件headless svc name
 func GetHeadlessServiceName(middlewareName string) string {
 	return middlewareName + "-headless"
