@@ -38,6 +38,13 @@ func (op *Operator) GrantDevopsUser(info Info, password string) ExecResult {
 	return result(res, err)
 }
 
+func (op *Operator) GrantDevopsUserAll(info Info, password string) ExecResult {
+	conn := op.getConnection(info, MYSQL_DB_NULL)
+	sql := GrantDevopsUserAll(password)
+	res, err := conn.Exec(sql)
+	return result(res, err)
+}
+
 func (op *Operator) GrantReplUser(info Info, password string) ExecResult {
 	conn := op.getConnection(info, MYSQL_DB_NULL)
 	res, err := conn.Exec(GrantReplUser(password))

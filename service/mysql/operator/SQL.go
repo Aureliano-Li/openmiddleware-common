@@ -67,6 +67,10 @@ var GrantDevopsUser = func(password string) string {
 	return fmt.Sprintf("GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'devops'@'%%' IDENTIFIED BY '%s'", password)
 }
 
+var GrantDevopsUserAll = func(password string) string {
+	return fmt.Sprintf("GRANT ALL PRIVILEGES ON *.* TO 'devops'@'%%' IDENTIFIED BY '%s'", password)
+}
+
 var GrantReplUser = func(password string) string {
 	return fmt.Sprintf("GRANT REPLICATION SLAVE ON *.* TO 'repl'@'%%' IDENTIFIED BY '%s'", password)
 }
